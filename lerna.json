@@ -1,0 +1,5 @@
+{
+  "packages": ["backend", "frontend", "mobile"],
+  "npmClient": "yarn",
+  "version": "0.0.0"
+}
