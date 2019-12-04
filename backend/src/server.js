@@ -1,23 +1,26 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
+const express = require("express");
+const mongoose = require("mongoose");
+const cors = require("cors");
+const dotenv = require("dotenv");
 
-const routes = require('./routes');
+const routes = require("./routes");
 
+dotenv.config();
 const app = express();
-const server = require('http').Server(app);
-const io = require('socket.io')(server);
+const server = require("http").Server(app);
+const io = require("socket.io")(server);
 
 const connectedUsers = {};
 
-io.on('connection', socket => {
+io.on("connection", socket => {
   const { user } = socket.handshake.query;
 
   connectedUsers[user] = socket.id;
 });
 
-mongoose.connect('mongodb+srv://omnistack:omnistack@cluster0-jxhrd.mongodb.net/omnistack8?retryWrites=true&w=majority', {
-  useNewUrlParser: true
+mongoose.connect(process.env.MONGO_URL, {
+  useNewUrlParser: true,
+  useCreateIndex: true
 });
 
 app.use((req, res, next) => {
