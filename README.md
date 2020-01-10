@@ -46,12 +46,12 @@ This app features all the latest tools and practices in mobile development!
 
 ### Getting started with the frontend app
 
-1. Move yourself to the backend folder: `cd frontend`
+1. Move yourself to the frontend folder: `cd frontend`
 2. Run `yarn start` to start the web application
 
 ### Getting started with the mobile app
 
-1. Move yourself to the backend folder: `cd mobile`
+1. Move yourself to the mobile folder: `cd mobile`
 2. Run `react-native run-ios` (or `run-android` if your prefer) to start the mobile app
 
 Note: If you choose to start the mobile app in the android emulator, you will have to start the emulator before using
