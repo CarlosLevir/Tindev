@@ -36,7 +36,7 @@ This app features all the latest tools and practices in mobile development!
 1. Clone this repo using `git clone git@github.com:CarlosLevir/tindev.git`
 2. Move yourself to the appropriate directory: `cd tindev`<br />
 3. Run `yarn` to install dependencies<br />
-4. Run `lerna bootstrap` to install the packages dependecies
+4. Run `yarn lerna bootstrap` to install the packages dependecies
 
 ### Getting started with the backend server
 
